@@ -189,34 +189,34 @@ num = 5
 
 # nested conditional statement
 
-ussd = input('Ussd code: ')
+# ussd = input('Ussd code: ')
 
-if ussd == '*312#':
-    print("""
-        1. Buy data
-        2. Check balance
-        #. exit
-    """)
-    choice = input('Choice: ')
-    if choice == '1':
-        print('''
-            1. Daily plan
-            2. Weekly plan
-            3. Monthly plan  
+# if ussd == '*312#':
+#     print("""
+#         1. Buy data
+#         2. Check balance
+#         #. exit
+#     """)
+#     choice = input('Choice: ')
+#     if choice == '1':
+#         print('''
+#             1. Daily plan
+#             2. Weekly plan
+#             3. Monthly plan  
         
-        ''')
-        choice2 = input('Choice: ')
+#         ''')
+#         choice2 = input('Choice: ')
         
-    elif choice == '2':
-        print('Your balance is  1000mb')
+#     elif choice == '2':
+#         print('Your balance is  1000mb')
     
-    elif choice == '#':
-        print('Bye Bye')
+#     elif choice == '#':
+#         print('Bye Bye')
     
-    else:
-        print('Invalid input')    
-else:
-    print('Invalid ussd code.')
+#     else:
+#         print('Invalid input')    
+# else:
+#     print('Invalid ussd code.')
     
     
     
@@ -228,5 +228,111 @@ else:
 #     print('no')
     
 # if val == 8:
+
+
+# python strings 
+
+name = "<//arise damilare%**" # ['A', 'r', 'i', 's', 'e', ' ', ....]
+# print(type(name))
+# print(len(name))
+# print(name[5])
+# print(name[-2])
+# print(name[6:10])  #slicing
+
+# print(ord('a'))
+# print(chr(65))
+
+# print(name.upper())
+# print(name.lower())
+# print(name.capitalize())
+# print(name.title())
+
+# ques = "What is the Capital of Nigeria?"
+# print(ques)
+# ans = input('Ans: ')
+# if ans.lower().strip() == 'abuja':
+#     print('correct. you sabi')
+# else:
+#     print('Olodo.')
+
+
+# print(len(name.strip()))
+
+# print(name.lstrip('</%*'))
+# print(name.rstrip('</%*'))
+
+
+var = 'Welcome. This is AI and Datascience Dept. ai Your are currntly in leve 2. python class ai'
+# print(var.split())
+# print(var.split('.'))
+
+#  word counter
+# text = input('Enter your essay: ')
+# if text == '':
+#     print('No essay inputed. Kindly enter an essay')
+# else:
+#     splitted = text.strip().split()
+#     print(f'Total word: {len(splitted)}')
     
     
+splitted = ['I', 'am', 'happy', 'to', 'be', 'here']
+# print('+'.join(splitted))
+
+# print(var.endswith('Class')) 
+# print(var.lower().startswith('welcome'))
+
+# print(var.find('pythons'))
+
+#  find if the sentence contains ai, datascience and python
+
+# words = ['ai', 'datascience', 'python']
+
+# if  'ai' in var.lower():
+#     print('Valid')
+# else:
+#     print('invalid')
+
+# var = var.lower()
+# print(var.find('ai', 88))
+
+
+# if var.find('ai') != -1 and var.find('datascience') != -1:
+#     print('found')
+# else:
+#     print('not found')
+
+
+# if var.find('ai') != -1 and var.find('datascience') != -1 and var.find('python') != -1:
+#     print('Found')
+# else:
+#     print('Not found')
+
+# class work 
+# Write a system that verifies if an email is valid or not
+
+# Assignment 
+# 1. build a simple cbt application  
+# 2.  build a simple grading system  
+# A - 70 - 100
+# B - 60 - 69
+# C - 50 - 59
+# D - 45 - 49
+# E - 40 - 44
+# F - 0 - 39
+ 
+    
+# Special character
+# print('I am \\b\\bhappy')
+
+# print('C:\\python_oct\\index.py')
+# print('it\'s mine')
+
+print(r'C:\python_oct\index.py')
+
+# '\n' -> next line
+# '\t' -> tab
+# '\r' -> return 
+# '\b' -> backspace
+# '\' -> escape character
+
+
