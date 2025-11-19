@@ -327,7 +327,7 @@ splitted = ['I', 'am', 'happy', 'to', 'be', 'here']
 # print('C:\\python_oct\\index.py')
 # print('it\'s mine')
 
-print(r'C:\python_oct\index.py')
+# print(r'C:\python_oct\index.py')
 
 # '\n' -> next line
 # '\t' -> tab
@@ -336,3 +336,116 @@ print(r'C:\python_oct\index.py')
 # '\' -> escape character
 
 
+# Python collections / Array
+
+# 1. List - [] or list()
+# A list is ordered, changeable or mutable, indexed, allows duplicate values
+fruits = ['Apple', 'Pineapple', 'Banana', 'Agbalumo', 'Pawpaw', 'Banana']
+# print(type(fruits))
+# print(len(fruits))
+# print(fruits[-2])
+# print(fruits[1:4])
+# print(fruits[-5:-1])
+# print(fruits[2:])
+# print(fruits[:4])
+
+# fruits[2] = 'Tomato'
+# print(fruits)
+
+# var = 'Tomato'
+# print(var[0])
+# var[0] = 'X'
+
+# fruits[0][0]
+
+
+# fruits.append('Tomato')
+# fruits.insert(0, 'Tomato')
+# fruits.extend(['Rice', 'Beans'])
+
+# fruits.pop(0)
+# fruits.remove('Pineapple')
+# fruits.clear()
+# print(fruits.index('Banana', 3))
+# fruits.reverse()
+
+# print(fruits) 
+
+num = [1, 3, 5, 6]
+# print(sum(num))
+# print(min(num))
+# print(max(num))
+
+# LOOP 
+# 1. For loop
+
+# for fruit in fruits:
+#     print(fruit, 'is a kind of fruit.')
+
+# print(list(range(0, 10, 2)))
+
+# for x in range(10):
+#     print(x)
+
+# for x in range(1, 6):
+#     print(f'\n{x} Times table\n')
+#     for y in range(1, 13):
+#         print(f'{x} X {y} = {x*y}')
+
+print('Welcome to my Todo application')  
+database = []
+
+for x in range(100):
+
+    print('''    
+        1. Add a todo
+        2. Delete a todo
+        3. Edit
+        4. view
+        5. clear all
+        #. Exit
+    ''')
+
+    choice = input('Choice: ').strip()
+    if choice == '1':
+        todo = input('Todo: ').strip().capitalize()
+        if todo == '':
+            print('Todo can not be empty!')
+        else:
+            database.append(todo)
+            print('Todo added!')
+
+    elif choice == '2':
+        pass
+    
+    elif choice == '4':
+        if database == []:
+            print('No Todo Yet!')
+        else:
+            num = 1
+            for x in database:
+                print(f'{num}. {x}')
+                num += 1
+            
+    elif choice == '#':
+        print('Bye!')
+        exit()
+        
+    else:
+        print('Invalid Choice.')
+        
+        
+# class work. 
+# https://www.99-bottles-of-beer.net/lyrics.html using for loop
+
+# Assigment.
+# 2. Complete the todo application 
+
+
+# 2. While loop
+
+
+
+# 2. Tuple
+# 3. Set
+# 4. Dictionary
