@@ -392,47 +392,47 @@ num = [1, 3, 5, 6]
 #     for y in range(1, 13):
 #         print(f'{x} X {y} = {x*y}')
 
-print('Welcome to my Todo application')  
-database = []
+# print('Welcome to my Todo application')  
+# database = []
 
-for x in range(100):
+# for x in range(100):
 
-    print('''    
-        1. Add a todo
-        2. Delete a todo
-        3. Edit
-        4. view
-        5. clear all
-        #. Exit
-    ''')
+#     print('''    
+#         1. Add a todo
+#         2. Delete a todo
+#         3. Edit
+#         4. view
+#         5. clear all
+#         #. Exit
+#     ''')
 
-    choice = input('Choice: ').strip()
-    if choice == '1':
-        todo = input('Todo: ').strip().capitalize()
-        if todo == '':
-            print('Todo can not be empty!')
-        else:
-            database.append(todo)
-            print('Todo added!')
+#     choice = input('Choice: ').strip()
+#     if choice == '1':
+#         todo = input('Todo: ').strip().capitalize()
+#         if todo == '':
+#             print('Todo can not be empty!')
+#         else:
+#             database.append(todo)
+#             print('Todo added!')
 
-    elif choice == '2':
-        pass
+#     elif choice == '2':
+#         pass
     
-    elif choice == '4':
-        if database == []:
-            print('No Todo Yet!')
-        else:
-            num = 1
-            for x in database:
-                print(f'{num}. {x}')
-                num += 1
+#     elif choice == '4':
+#         if database == []:
+#             print('No Todo Yet!')
+#         else:
+#             num = 1
+#             for x in database:
+#                 print(f'{num}. {x}')
+#                 num += 1
             
-    elif choice == '#':
-        print('Bye!')
-        exit()
+#     elif choice == '#':
+#         print('Bye!')
+#         exit()
         
-    else:
-        print('Invalid Choice.')
+#     else:
+#         print('Invalid Choice.')
         
         
 # class work. 
@@ -441,11 +441,260 @@ for x in range(100):
 # Assigment.
 # 2. Complete the todo application 
 
-
 # 2. While loop
 
+# 2. Tuple '()' - Indexed, ordered, unchangeable|immutable , allows duplicate values 
+fruits = ('Apple', 'Orange', 'Apple', 'Cherry')
+
+# print(type(fruits))
+# print(len(fruits))
+# print(fruits[0][0])
+# print(fruits[0:2])
+
+# fruits[0] = 'Pineapple' # error.
+# print(fruits.count("Orange"))
+# print(fruits.index('Cherry'))
+
+# fruits_list = list(fruits)
+# fruits_list[0] = 'Pineapple'
+# print(fruits_list)
+# fruits = tuple(fruits_list)
+# print(fruits)
+
+# Unpacking
+# a, b, c, d  = fruits
+a, *d, e  = fruits
+# *a, b, c = fruits
+# *fruits_list, = fruits
+# print(fruits_list)
+# fruits_list[0] = 'Pineapple'
+# fruits = tuple(fruits_list)
+# print(fruits)
+
+score = 0
+
+# print('1. What is the capital of Nigeria.  \na.) Abuja .b)Lagos')
+# ans = input('Ans: ').strip().lower()
+# if ans == 'a':
+#     score += 1
+#     print('Correct')
+    
 
 
-# 2. Tuple
-# 3. Set
-# 4. Dictionary
+questions = [
+    '1. What is the capital of Nigeria.  \na.) Abuja .b)Lagos',
+    '2. What is the Capital of Ghana. \na.) Accra .b)Lagos'
+]
+
+answers = ['a', 'a']
+mark = [5, 10]
+
+# for ques, ans, mrk in zip(questions, answers, mark):
+#     print(ques) 
+#     user_ans = input('Ans: ').strip().lower()
+#     if user_ans == ans:
+#         print('Correct\n')
+#         score += mrk
+#     else:
+#         print('Wrong\n')
+
+# print(f'Total score is {score}/{sum(mark)}')
+
+# exams = [
+#     ('1. What is the capital of Nigeria.  \na.) Abuja .b)Lagos', 'a', 2),
+#     ('2. What is the Capital of Ghana. \na.) Accra .b)Lagos', 'a', 4),
+#     ('3. What is the capital of Japan. \na.) Japan b.) Tokyo', 'b', 5)
+# ]
+
+# for ques, ans, mrk in exams:
+#     print(ques)
+#     user_ans = input('Ans: ').strip().lower()
+#     if user_ans == ans:
+#         print('Correct\n')
+#         score += mrk
+#     else:
+#         print('Wrong\n')
+
+# print(f'Total score is {score}')
+    
+
+# 3. Set {} | set() - unordered, unchangeable|immutable, can't be indexed, doesn't allow duplicate
+fruits = {'Apple', 'Orange', 'Apple', 'Cherry'}
+# print(fruits[0])
+# fruits.add('Mango')
+# fruits.remove('Orange')
+# fruits.discard('Oranges')
+
+# fruits.update(['Mango', 'Tomato'])
+# fruits.clear()
+# print(fruits)
+fruits.pop()
+# print(fruits)
+# db = set()
+
+setA = {2, 3, 4, 7, 8, 9, 1, 5, 6}
+setB = {13, 4, 3, 2, 5, 12, 10, 11}
+setC = {1, 2, 4}
+setD = {20, 21}
+# print(setA)
+# print(setA.union(setB))
+# print(setA.intersection(setB))
+# print(setA.difference(setB))
+# print(setA.symmetric_difference(setB))
+
+# setA.intersection_update(setB)
+# print(setA)
+
+# print(setA.issubset(setC))
+# print(setA.issuperset(setC))
+# print(setA.isdisjoint(setD))
+
+
+
+
+# 4. Dictionary {}
+person = {
+    'last_name': 'Edun',
+    'first_name': 'Boluwatife',
+    'course': 'Data Science',
+    'height': 5.7,
+    # 'location': {
+    #     'street': 'Onward way',
+    #     'city': 'Ikeja',
+    #     'state': 'Lagos',
+    #     'geo': {
+    #         'lat': 123,
+    #         'lon': 456
+    #     }
+    # }
+}
+
+# print(person['last_names'])
+# print(person.get('last_name', 'Not Found'))
+# person.pop('course')
+
+# print(person)
+# person.update({'course': 'AI', 'location': 'Lagos'})
+# print(person['location']['geo']['lat'])
+
+# print(person.values())
+# print(person.items())
+
+# for key, val in person.items():
+#     print(key, val)
+
+
+exams = {
+    '1. What is the capital of Nigeria.  \na.) Abuja .b)Lagos': 'a',
+    '2. What is the Capital of Ghana. \na.) Accra .b)Lagos': 'a',
+}
+
+# for ques, ans in exams.items():
+#     print(ques)
+
+
+# Assignment 
+db = ['eat', 'sleep']
+
+db = [
+    {'todo': 'Eat', 'completed': False},
+]
+# Build a todo app using the structure above0
+
+
+
+# WHILE LOOP
+
+# x = 5
+# while x > 0:
+#     print('Hello', x)
+#     x -= 1
+
+# x = 0 
+# while x < 10:
+
+#     # if x == 7:
+#     #     break
+#     x+=1  
+#     if x == 7:
+#         continue
+    
+#     print('Hello', x)
+      
+# else:
+#     print('Done')
+
+
+# tickets = 10
+
+# while tickets > 0:
+#     age = int(input('Age: '))
+#     if age < 18:
+#         print('Too young. come back next year!')
+#         continue
+    
+#     if tickets == 3:
+#         print(tickets, 'Reserved.')
+#         break
+    
+#     tickets -= 1
+#     print('Take your ticket. remaining', tickets)
+    
+# else:
+#     print('No more ticket.')   
+
+database = []
+print('Welcome to MyTodo')
+while True:
+    print('''
+        1. Add Todo
+        2. Delete Todo
+        3. View Todo
+        4. Mark as completed
+        #. Exit
+    ''')
+    choice = input('Choice: ').strip()
+    if choice == '1':
+        todo = input('Input Your Todo: ').strip().capitalize()
+        if not todo:
+            print('Kindly input a todo')
+            continue
+        
+        todo_obj = {
+            'todo': todo,
+            'completed': False
+        }
+        database.append(todo_obj)
+        print('Todo added successfully')
+        
+    elif choice == '2':
+        pass
+    
+    elif choice == '3':
+        # print(database)
+        no = 1
+        for data in database:
+            todo = data['todo']
+            status = data['completed']
+            print(f"{no}. {todo} - {'[Completed]' if status else '[Not Completed]'} ")
+
+            no += 1 
+        
+        
+    elif choice == '4':
+        num = int(input('Complete todo number? '))
+        if num > len(database) or num < 1:
+            print('Invalid Selection')
+            continue
+        
+        database[num -1]['completed'] = True
+        print('Done!')     
+    
+    elif choice == '#':
+        print('Good Bye!')
+        exit()
+    
+    else:
+        print('Invalid Input')
+    
+    
