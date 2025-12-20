@@ -173,4 +173,149 @@ class Bank:
             
         
         
-uba = Bank('UBA')
+# uba = Bank('UBA')
+
+
+# Inheritance
+f_name = 'Ayo'
+
+class Human:
+    sex = 'Male'
+    f_name = None
+    l_name = None
+
+    
+    def __init__(self, first_name, last_name):
+        self.f_name = first_name # 'Adewale'
+        self.l_name = last_name # 'Ayuba
+        # print('Welcome')
+    
+    def intro(self):
+        print(f'My name is {self.f_name} {self.l_name}')
+
+
+# person1 = Human('Adewale', 'Ayuba') 
+# print(person1.sex)
+# person1.intro()
+
+
+# person2 = Human()
+
+
+class Child(Human):
+    hobby = None
+    
+    def __init__(self, first_name, last_name, hobby):
+        super().__init__(first_name, last_name)
+        self.hobby = hobby
+
+    def likes(self):
+        print(f'I like {self.hobby}')
+
+# child1 = Child('Adeniyi', 'Stephen', 'Coding')
+# print(child1.sex)
+# child1.intro()
+# child1.likes()
+
+
+
+
+    
+    
+# Frontend
+
+# import config
+# from config import BankConfig # if they are in the same folder
+from modules.config import BankConfig as BK
+
+
+
+# class BankFrontend(config.BankConfig):
+class BankFrontend(BK):
+    
+    def __init__(self, bank_name):
+        super().__init__(bank_name)
+        print(f'\nWelcome to {self.name}')
+    
+    def home(self):
+        print('''
+            1. Deposit
+            2. Withdraw
+            3. Check Balance 
+            #. Exit
+        ''')
+        
+        choice = input('Choice: ')
+        if choice == '1':
+            self.deposit()
+            
+        elif choice == '2':
+            self.withdraw()
+        
+        elif choice == '3':
+            self.check_balance()
+        
+        elif choice == '#':
+            print('Goodbye!')
+            exit()
+        else:
+            print('Invalid input')
+            self.home()
+        
+    def deposit(self):
+        amount = float(input('Amount: '))
+        resp = self.perform_deposit(amount)
+        
+        print(resp['message'])
+        
+        if resp['status']:
+            self.home()
+        else:
+            self.deposit()
+            
+    def withdraw(self):
+        amount = float(input('Amount: '))
+        resp = self.perform_withdraw(amount)
+        
+        print(resp['message'])
+        
+        if resp['status']:
+            self.home()
+        else:
+            self.withdraw()
+            
+    def check_balance(self):
+        print(f'Your balance is ${self.get_balance()}')    
+        self.home()
+        
+        
+        
+# bank1 = BankFrontend('MyBank')
+# bank1.home()
+
+
+# Modularization
+# 1. Python Scripts
+# 2. Modules # time
+import time, datetime as dt, random as rd
+
+# print('Loading...')
+# time.sleep(3)
+# print('Done')
+
+# print(dt.datetime.now())
+
+# print(rd.random() * 100000)
+print(rd.randint(2000000000, 2099999999))
+
+
+
+# 3. Library # pandas, numpy,
+# import pandas as pd
+ 
+# 4. Frame work # seaborn, Django, fastApi
+
+
+import pyttsx3
+
+pyttsx3.speak('I believe you are finding python interesting')
