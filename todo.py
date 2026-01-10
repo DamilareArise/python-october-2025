@@ -1,4 +1,3 @@
-
 from my_modules.todoConfig import Config
 import time
 
