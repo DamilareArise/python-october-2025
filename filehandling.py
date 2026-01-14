@@ -35,20 +35,20 @@
     
 # print(file.read(10))
 
-names = []
-heights = []
+# names = []
+# heights = []
 
-with open('president_height.csv') as file:
-    data = file.readlines()
-    data.pop(0)
-    # print(data)
+# with open('president_height.csv') as file:
+#     data = file.readlines()
+#     data.pop(0)
+#     # print(data)
     
-    for item in data:
-       val = item.split(',')
-       name = val[1]
-       height = int(val[2].strip('\n'))
-       names.append(name)
-       heights.append(height)
+#     for item in data:
+#        val = item.split(',')
+#        name = val[1]
+#        height = int(val[2].strip('\n'))
+#        names.append(name)
+#        heights.append(height)
        
        
 # print(names)
@@ -66,13 +66,27 @@ with open('president_height.csv') as file:
     
 #     index += 1
 
-import statistics as stat
+# import statistics as stat
 
-mode = stat.mode(heights)
-# print(mode)
-index = 0
-for height in heights:
-    if height == mode:
-        print(names[index])
+# mode = stat.mode(heights)
+# # print(mode)
+# index = 0
+# for height in heights:
+#     if height == mode:
+#         print(names[index])
     
-    index += 1
+#     index += 1
+    
+# using os - operating system
+
+import os
+from pathlib import Path
+
+# print(os.getcwd())
+# os.mkdir('my_folder')
+# os.rmdir('my_folder')
+# os.remove('test.pdf')
+
+# print(os.path.exists('test.pdf'))
+# print(os.path.dirname(r"C:\python_oct\todo.py"))
+
